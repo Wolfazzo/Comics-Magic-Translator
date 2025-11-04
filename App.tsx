@@ -530,7 +530,7 @@ const AppContent: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    fetch('/metadata.json')
+    fetch('metadata.json')
       .then(res => res.json())
       .then(data => {
         if (data && data.name) {
@@ -1129,26 +1129,31 @@ const handleApplyImageEdit = useCallback(async (
     };
     
     const loadFontsFromManifest = async (manifest: { name: string; file: string }[]) => {
-    const basePath = import.meta.env.BASE_URL || '/';
-    const fontPromises = manifest.map(async (font) => {
-        const fontUrl = `${basePath}fonts/${font.file}`;
-        const fontFace = new FontFace(font.name, `url(${fontUrl})`);
-        try {
-            const loadedFont = await fontFace.load();
-            document.fonts.add(loadedFont);
-            return font.name;
-        } catch (err) {
-            console.error(`Failed to load font: ${font.name} from ${fontUrl}`, err);
-            return null;
-        }
-    });
-  
+        const fontPromises = manifest.map(async (font) => {
+            const fontFace = new FontFace(font.name, `url(/fonts/${font.file})`);
+            try {
+                const loadedFont = await fontFace.load();
+                document.fonts.add(loadedFont);
+                return font.name;
+            } catch (err) {
+                console.error(`Failed to load font: ${font.name} from ${font.file}`, err);
+                return null;
+            }
+        });
 
         const loadedFonts = (await Promise.all(fontPromises)).filter((name): name is string => name !== null);
         setCustomFonts(prev => [...new Set([...prev, ...loadedFonts])].sort());
     };
 
-    /home/ronny/Dati/Iso-App/App python sviluppo/CMT/cmt.0.50.7.vanilla/App.tsx
+    const loadInitialFonts = async () => {
+        
+        await loadPersistedFonts();
+        await loadSystemFonts();
+    };
+
+    loadInitialFonts();
+  }, [loadSystemFonts]);
+
 
   useEffect(() => {
     if (availableFonts.length > 0) {
