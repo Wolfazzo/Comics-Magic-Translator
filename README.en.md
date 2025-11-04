@@ -234,3 +234,177 @@ Provides a **layered view** of all text and image elements on the page.
 
 ---
 
+# ⚙️ Chapter 3 — Main Workflows
+
+This section describes the **core operational processes** of the application, from the initial page upload to the final formatting of the translated text.
+
+---
+
+## 📁 Project Loading and Management
+
+A well-organized workflow starts with proper file and project management.
+
+---
+
+### 🖼️ Importing Pages (Images)
+
+The process always begins with loading the images to be translated.
+
+#### 🔹 Procedure
+
+1. **Start:** Click **Upload Pages** in the *File Panel*.  
+2. **Selection:** In the system dialog, choose one or more images (formats: **PNG, JPG, WebP**).  
+3. **Display:** Loaded images will appear as **thumbnails** in the *File Panel*.  
+   - The **first** image is automatically loaded into the *central Canvas*.  
+   - To work on another page, simply click its thumbnail.
+
+---
+
+### 💾 Saving and Loading a Project (.cmt.zip)
+
+To avoid losing your progress and resume work later, use the **Save** and **Load Project** functions.
+
+#### 💾 Save Project
+
+1. Click **Save Project**.  
+2. The app will gather:
+   - 🖼️ Original loaded images.  
+   - ✂️ Edited versions (cleaned, modified).  
+   - 🔲 All OCR and text boxes (position, style, content).  
+   - ⏪ Undo/Redo history.  
+   - ⚙️ Active profile settings.  
+3. Everything is compressed into a **`.cmt.zip`** file saved on your computer.
+
+#### 📂 Load Project
+
+1. Click **Load Project**.  
+2. Select a previously saved `.cmt.zip` file.  
+3. The app restores the full work environment:
+   - Pages, text boxes, and modifications.  
+   - The last active page is reopened automatically in the *Canvas*.
+
+---
+
+## ⚡ Automatic Translation Process ("Auto Workflow")
+
+The **Auto** button enables **maximum speed**, chaining the most common operations in a single click.  
+It can be used in **two main modes**.
+
+---
+
+### 🎯 Using "Auto" on a Selection
+
+Fastest way to translate text from one or more comic panels.
+
+#### 🔹 Procedure
+
+1. **Select:** Use the *Magic Wand* or *Manual Selection* to highlight the source text.  
+   - `Shift` → add areas  
+   - `Alt` → remove areas  
+2. **Run:** Click **Auto**.  
+3. **Automatic Process:**
+   - 🧩 *Finalization:* The selection becomes optimized OCR boxes.  
+   - 🔍 *OCR:* Extracts the text.  
+   - 🧽 *Inpainting:* Removes original text using AI fill.  
+   - 🌐 *Translation:* Sends text to the translation service.  
+   - 📝 *Creation:* Generates new **Text Boxes** with translations.  
+4. **Review:** Adjust or reposition text boxes as needed.
+
+---
+
+### 🧠 Using "Auto" on All OCR Boxes
+
+Useful when **OCR Boxes** have already been manually created on the page.
+
+#### 🔹 Procedure
+
+1. **Preparation:** Ensure one or more OCR Boxes are present and nothing is selected.  
+2. **Run:** Click **Auto**.  
+3. **Automatic Process:**
+   - 🧽 *Inpainting:* Cleans each OCR Box area.  
+   - 🌐 *Translation:* Translates all OCR texts in one request.  
+   - 📝 *Creation:* Generates translated text boxes for each OCR Box.
+
+---
+
+## 🪄 Manual Translation Process (Step-by-Step)
+
+This workflow breaks down the automatic process, giving **full control** over each stage.
+
+---
+
+### 1️⃣ Creating Selection Areas
+
+#### 🔹 Magic Wand
+- Activate from the *Tool Panel*.  
+- Click on the text to select pixels of similar color.  
+- Adjust **Tolerance** to refine the selection.
+
+#### 🔹 Manual Selection
+- Activate the tool and drag to draw a rectangular selection.
+
+#### ✏️ Modify Selection
+- **Add:** `Shift`  
+- **Subtract:** `Alt`  
+- **Quick Buttons:**  
+  - ❌ *Clear Selection*  
+  - 🔁 *Recall Selection*
+
+---
+
+### 2️⃣ Performing OCR (Text Extraction)
+
+1. Create or select an area covering the source text.  
+2. Click **OCR**.  
+3. The app creates a **vector OCR Box** and extracts the text.  
+4. Extracted text appears in the **Source Text** field of the *Tool Panel*.
+
+---
+
+### 3️⃣ Background Cleaning (Inpainting)
+
+1. Select or recall the last area.  
+2. Click **Inpaint**.  
+3. The algorithm fills the area with surrounding colors, removing the text.  
+4. Options:
+   - 🎨 *Automatic Color*  
+   - 🖌️ *Manual Color*  
+5. For manual refinements, use **Brush** and **Eraser**.
+
+---
+
+### 4️⃣ Performing Translation
+
+1. Once OCR Boxes are ready, click **Translate**.  
+2. The app sends the source text to the translation API.  
+3. New **translated Text Boxes** are created for each OCR Box.
+
+---
+
+### 5️⃣ Text Formatting and Refinement
+
+#### ✏️ Edit and Review
+- Click a **Text Box** to select it.  
+- Edit text in the **Display Text** field or directly on the *canvas* via double-click.
+
+#### 🎨 Formatting
+Use controls in *Tool Panel → Text Formatting* for:
+- 🅰️ Font and size  
+- 🧭 Alignment (left, center, right)  
+- 🔠 Bold and italic  
+- 🎨 Text and outline color  
+- 📏 Line and word spacing
+
+#### 🪶 Positioning
+- Drag to move boxes.  
+- Use handles to **resize** or **rotate**.  
+- Align text perfectly inside the comic balloon.
+
+---
+
+## 💡 Final Tip
+
+For best results:  
+> 🔧 Alternate between **Auto** mode for speed and **Manual** mode for precision.
+
+---
