@@ -726,3 +726,91 @@ The order will match the **File Panel**, ensuring a coherent and sequential read
 > The export process saves the current visual state, including all layers and formatting.
 
 ---
+# 🪟 Chapter 6 — Auxiliary Windows
+
+In addition to the main panels, **Comics Magic Translator** includes several **floating and resizable auxiliary windows**, designed to assist in the translation process without cluttering the main workspace.
+
+---
+
+## 🖼️ Original Image Viewer
+
+This window is an essential tool for **quality control**.  
+It allows you to view the **original, unmodified page** alongside the active version in the *main canvas*.
+
+### 🎯 Purpose
+
+- **Direct Comparison:**  
+  Displays the translated and original versions side by side, useful for checking fidelity and text placement.
+
+- **Cleaning Verification:**  
+  Helps ensure that the *inpainting* process has completely removed the source text without artifacts or smudges.
+
+- **Retouch Reference:**  
+  During manual retouching, it allows you to replicate textures and colors by observing the original in real time.
+
+### ⚙️ How It Works
+
+- **Opening:**  
+  Open it by clicking **Compare with Original**, located in the application header.
+
+- **Floating Window:**  
+  Appears as an **independent panel** that can be freely moved by dragging its title bar.
+
+- **Independent Navigation:**  
+  Inside, the image can be:  
+  - **Zoomed in/out** with the mouse wheel  
+  - **Panned** by dragging with the left mouse button  
+  These controls are independent of the main canvas, allowing you to zoom in on different areas between the two views.
+
+- **Closing:**  
+  Close it by clicking the **“X” icon** in the window header.
+
+---
+
+## 📝 Project Notes
+
+The **Notes Panel** is an **integrated notepad** designed to record useful information during translation or typesetting.
+
+### 🎯 Purpose
+
+- **Translation Notes:**  
+  To record specific terms, stylistic choices, or lines to review later.
+
+- **Typesetting Reminders:**  
+  Notes on fonts to use, alignments to fix, or areas to retouch.
+
+- **Collaboration:**  
+  In a team workflow, notes can be left for the **proofreader** or **quality checker**.
+
+### ⚙️ How It Works
+
+- **Opening and Management:**  
+  Open it using the **note icon** located beside the canvas.  
+  It’s a floating window that can be freely moved around the screen.
+
+- **Creating Notes:**  
+  Click **Add Note** to generate a new editable box.
+
+- **Priority Levels:**  
+  Each note can be classified as:  
+  - 🟢 **Normal**  
+  - 🟡 **Important**  
+  - 🔴 **Critical**  
+  The border color changes according to priority, providing quick visual recognition.
+
+- **Automatic Saving:**  
+  All notes are included in the `.cmt.zip` project file when using the **Save Project** function.
+
+- **Import/Export:**  
+  Notes can be exported to a `.json` file for sharing or external editing.  
+  They can later be **reimported into the project**.  
+  This feature is particularly useful for translators and typesetters working separately.
+
+---
+
+> 💡 **Tip:**  
+> Keep the Original Viewer and Notes Panel open during final review.  
+> They help ensure both visual and linguistic consistency throughout the chapter.
+
+---
+
