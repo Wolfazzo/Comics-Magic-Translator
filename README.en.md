@@ -814,3 +814,104 @@ The **Notes Panel** is an **integrated notepad** designed to record useful infor
 
 ---
 
+# ⚙️ Chapter 7 — Settings and Preferences
+
+The **Settings** (or Preferences) window, accessible via the **gear icon** in the header, is the control center for **customizing every aspect of Comics Magic Translator**.  
+Here you can tailor the app to your workflow, manage languages, fonts, and more.  
+Settings are organized into **profiles** for maximum flexibility.
+
+---
+
+## 🗂️ Profile Management
+
+A **profile** is a saved set of all the app’s settings.  
+You can create different profiles for different comics (e.g., B/W manga, colored webtoons) or for different roles (translator, typesetter).
+
+### 🔹 Creating a Profile
+
+1. Go to the **Profiles** section.  
+2. The displayed settings belong to the **active profile**, selected in the dropdown menu.  
+3. To create a new profile based on the current one, enter a name in the **New profile name…** field.  
+4. Click **Save as New Profile**. The new profile will immediately become active.
+
+### 🔹 Saving, Importing, and Exporting Profiles
+
+- **Active Profile Selection:** Use the dropdown menu to choose which profile to edit. All changes in other settings sections will apply to this profile.  
+- **Saving:** Changes to a profile are automatically saved when clicking **Save & Close**.  
+- **Exporting:** Click **Export Profile** to generate a `.prof` file to share or archive.  
+- **Importing:** Click **Import Profile** to load a `.prof` file. If the profile ID already exists, the app will ask for confirmation before overwriting it.
+
+---
+
+## 🌐 Translation Settings
+
+This section controls the languages used by the app.
+
+- **Default Target Language:**  
+  Sets the language you want to translate comics into.  
+  This will be the default for the **Translate** and **Auto** buttons, and can be changed from the toolbar.
+
+- **Interface Language:**  
+  Changes the language of menus, buttons, and labels in the app.
+
+---
+
+## 🔑 API Key Configuration
+
+To use the **AI-powered OCR and translation** features, you must provide an API key for **Google Gemini**.
+
+### 🔹 Getting an API Key
+
+- Visit **Google AI Studio** to obtain a free API key.
+
+### 🔹 How to Set It
+
+1. Go to the **API Key** section.  
+2. Paste the key into the text field. The key is saved locally in the browser.  
+3. Click **Save API Key**.  
+4. **Fallback:** If no key is found in the browser, the app will look for one in a `.env.local` file in the project folder (developer option).
+
+---
+
+## 🔤 Font Management
+
+This section allows you to **manage the available fonts** for typesetting, including your custom ones.
+
+### 🔹 Loading Fonts
+
+- **Load System Fonts:**  
+  If supported by the browser, this lets you add fonts installed on your computer. Fonts are saved in the browser database for future use.
+
+- **Load Font Files:**  
+  Upload `.ttf`, `.otf`, or `.woff` files directly from your computer.
+
+- **Clear Stored Fonts:**  
+  Removes all manually or system-loaded fonts.
+
+### 🔹 Selecting Visible Fonts
+
+- The list displays all available fonts (default, system, and uploaded).  
+- Check or uncheck boxes to decide which fonts appear in the **FontSelector** tool menu.  
+- Use **Select All / Deselect All** for quick changes.
+
+---
+
+## 🖥️ Layout Customization
+
+Adapt the workspace to your preferences and screen size.
+
+- **Panel Widths:**  
+  Set the percentage width for the three main panels:  
+  - Left (Files/Layers)  
+  - Center (Canvas)  
+  - Right (Tools)  
+  The central panel width is calculated automatically.
+
+- **Text Area Heights:**  
+  Set the pixel height for the **Source Text** and **Display Text** areas. Useful for long dialogues.
+
+- **Reset Layout:**  
+  Restores width and height settings to their defaults.
+
+---
+
