@@ -231,3 +231,181 @@ Fornisce una **vista a strati** di tutti gli elementi di testo e immagine sulla 
 
 > 🔧 **Consiglio:** utilizza il *Workflow Automatico* per volumi o capitoli interi, e il *Manuale* per balloon con layout complessi o testi stilisticamente delicati.
 
+---
+
+# ⚙️ Capitolo 3 — Flussi di Lavoro Principali
+
+Questa sezione descrive i **processi operativi fondamentali** dell’applicazione, dal caricamento iniziale delle pagine fino alla formattazione finale del testo tradotto.
+
+---
+
+## 📁 Caricamento e Gestione del Progetto
+
+Un flusso di lavoro ordinato inizia con una corretta gestione dei file e dei progetti.
+
+---
+
+### 🖼️ Importazione delle Pagine (Immagini)
+
+Il lavoro parte sempre dal caricamento delle immagini da tradurre.
+
+#### 🔹 Procedura
+
+1. **Avvio:** clicca su **Carica Pagine (Upload Pages)** nel *Pannello File*.  
+2. **Selezione:** nella finestra di dialogo del sistema, scegli una o più immagini (formati: **PNG, JPG, WebP**).  
+3. **Visualizzazione:** le immagini caricate appariranno come **miniature** nel *Pannello File*.  
+   - La **prima** immagine viene caricata automaticamente nel *Canvas centrale*.  
+   - Per lavorare su un’altra pagina, clicca semplicemente sulla sua miniatura.
+
+---
+
+### 💾 Salvataggio e Caricamento di un Progetto (.cmt.zip)
+
+Per non perdere il lavoro e poterlo riprendere in un secondo momento, utilizza le funzioni di **salvataggio e caricamento** del progetto.
+
+#### 💾 Salvataggio del Progetto
+
+1. Clicca su **Salva Progetto (Save Project)**.  
+2. L’app raccoglierà:
+   - 🖼️ Le immagini originali caricate.  
+   - ✂️ Le versioni modificate (pulizia, editing).  
+   - 🔲 Tutti i box OCR e di testo (posizione, stile, contenuto).  
+   - ⏪ La cronologia delle azioni (Undo/Redo).  
+   - ⚙️ Le impostazioni del profilo attivo.  
+3. Tutto viene compresso in un file **`.cmt.zip`** che puoi salvare sul tuo computer.
+
+#### 📂 Caricamento di un Progetto
+
+1. Clicca su **Carica Progetto (Load Project)**.  
+2. Seleziona un file `.cmt.zip` salvato in precedenza.  
+3. L’app ripristinerà l’intero ambiente di lavoro:
+   - Pagine, box di testo e modifiche.  
+   - La pagina attiva al momento del salvataggio verrà riaperta automaticamente nel *Canvas*.
+
+---
+
+## ⚡ Processo di Traduzione Automatica ("Auto Workflow")
+
+Il pulsante **Auto** è pensato per la **massima velocità**, concatenando le operazioni più comuni in un solo clic.  
+Può essere utilizzato in **due modalità principali**.
+
+---
+
+### 🎯 Uso di "Auto" su una Selezione
+
+Metodo più veloce per tradurre il testo di una o più vignette.
+
+#### 🔹 Procedura
+
+1. **Selezione:** usa la *Bacchetta Magica* o la *Selezione Manuale* per selezionare il testo originale.  
+   - `Shift` → aggiungi aree  
+   - `Alt` → rimuovi aree  
+2. **Esecuzione:** clicca su **Auto**.  
+3. **Processo Automatico:**
+   - 🧩 *Finalizzazione:* la selezione diventa uno o più box OCR ottimizzati.  
+   - 🔍 *OCR:* il testo viene estratto.  
+   - 🧽 *Pulizia:* viene eseguito l’**Inpainting** per rimuovere il testo originale.  
+   - 🌐 *Traduzione:* il testo viene inviato al servizio di traduzione.  
+   - 📝 *Creazione:* vengono creati nuovi **Box di Testo** con la traduzione.  
+4. **Revisione:** correggi o sposta i nuovi box, se necessario.
+
+---
+
+### 🧠 Uso di "Auto" su Tutti i Box OCR
+
+Utile quando i **Box OCR** sono già stati creati manualmente sulla pagina.
+
+#### 🔹 Procedura
+
+1. **Preparazione:** assicurati di avere uno o più Box OCR presenti e nessun elemento selezionato.  
+2. **Esecuzione:** clicca su **Auto**.  
+3. **Processo Automatico:**
+   - 🧽 *Pulizia:* esegue l’inpainting per ogni Box OCR.  
+   - 🌐 *Traduzione:* traduce tutti i testi OCR in un’unica richiesta.  
+   - 📝 *Creazione:* genera i corrispondenti Box di Testo tradotti.
+
+---
+
+## 🪄 Processo di Traduzione Manuale (Passo Dopo Passo)
+
+Questo flusso di lavoro scompone il processo automatico, dando **pieno controllo** su ogni fase.
+
+---
+
+### 1️⃣ Creazione delle Aree di Selezione
+
+#### 🔹 Bacchetta Magica (Magic Wand)
+- Attiva lo strumento dal *Pannello Strumenti*.  
+- Clicca sul testo per selezionare i pixel di colore simile.  
+- Regola la **Tolleranza** per ampliare o restringere la selezione.
+
+#### 🔹 Selezione Manuale (Manual Selection)
+- Attiva lo strumento e trascina per disegnare un rettangolo di selezione.
+
+#### ✏️ Modifica della Selezione
+- **Aggiungere:** `Shift`  
+- **Sottrarre:** `Alt`  
+- **Pulsanti rapidi:**  
+  - ❌ *Cancella Selezione (Clear Selection)*  
+  - 🔁 *Richiama Selezione (Recall Selection)*
+
+---
+
+### 2️⃣ Esecuzione dell’OCR (Estrazione del Testo)
+
+1. Crea o seleziona un’area che copra il testo originale.  
+2. Clicca su **OCR**.  
+3. L’app creerà un **Box OCR vettoriale** ed estrarrà il testo.  
+4. Il testo estratto apparirà nel campo **Testo Sorgente (Source Text)** del *Pannello Strumenti*.
+
+---
+
+### 3️⃣ Pulizia dello Sfondo (Inpainting)
+
+1. Seleziona l’area da pulire o richiama l’ultima selezione.  
+2. Clicca su **Riempi (Inpaint)**.  
+3. L’algoritmo riempirà l’area con i colori circostanti, cancellando il testo.  
+4. Opzioni disponibili:
+   - 🎨 *Colore Automatico*  
+   - 🖌️ *Colore Manuale*  
+5. Per rifiniture manuali, usa **Pennello (Brush)** e **Gomma (Eraser)**.
+
+---
+
+### 4️⃣ Esecuzione della Traduzione
+
+1. Quando i Box OCR sono pronti, clicca su **Traduci (Translate)**.  
+2. L’app invierà il testo sorgente all’API di traduzione.  
+3. Verranno creati nuovi **Box di Testo tradotti** per ogni box OCR.
+
+---
+
+### 5️⃣ Formattazione e Rifinitura del Testo
+
+#### ✏️ Modifica e Revisione
+- Clicca su un **Box di Testo** per selezionarlo.  
+- Modifica il testo nel campo **Testo di Visualizzazione** o direttamente nel *canvas* con doppio clic.
+
+#### 🎨 Formattazione
+Utilizza i controlli nel *Pannello Strumenti → Formattazione Testo* per:
+- 🅰️ Font e dimensione  
+- 🧭 Allineamento (sinistra, centro, destra)  
+- 🔠 Grassetto e corsivo  
+- 🎨 Colore testo e contorno  
+- 📏 Interlinea e spaziatura
+
+#### 🪶 Posizionamento
+- Trascina per spostare il box.  
+- Usa le maniglie per **ridimensionare** o **ruotare**.  
+- Allinea perfettamente il testo all’interno del *balloon* del fumetto.
+
+---
+
+## 💡 Suggerimento Finale
+
+Per ottenere i migliori risultati:
+> 🔧 Alterna la modalità automatica (“Auto”) e quella manuale in base al livello di precisione richiesto.  
+> Usa “Auto” per velocità e “Manuale” per controllo dettagliato.
+
+---
+
