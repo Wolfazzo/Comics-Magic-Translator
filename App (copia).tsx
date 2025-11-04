@@ -1129,26 +1129,46 @@ const handleApplyImageEdit = useCallback(async (
     };
     
     const loadFontsFromManifest = async (manifest: { name: string; file: string }[]) => {
-    const basePath = import.meta.env.BASE_URL || '/';
-    const fontPromises = manifest.map(async (font) => {
-        const fontUrl = `${basePath}fonts/${font.file}`;
-        const fontFace = new FontFace(font.name, `url(${fontUrl})`);
-        try {
-            const loadedFont = await fontFace.load();
-            document.fonts.add(loadedFont);
-            return font.name;
-        } catch (err) {
-            console.error(`Failed to load font: ${font.name} from ${fontUrl}`, err);
-            return null;
-        }
-    });
-  
+        const fontPromises = manifest.map(async (font) => {
+            const fontFace = new FontFace(font.name, `url(/fonts/${font.file})`);
+            try {
+                const loadedFont = await fontFace.load();
+                document.fonts.add(loadedFont);
+                return font.name;
+            } catch (err) {
+                console.error(`Failed to load font: ${font.name} from ${font.file}`, err);
+                return null;
+            }
+        });
 
         const loadedFonts = (await Promise.all(fontPromises)).filter((name): name is string => name !== null);
         setCustomFonts(prev => [...new Set([...prev, ...loadedFonts])].sort());
     };
 
-    /home/ronny/Dati/Iso-App/App python sviluppo/CMT/cmt.0.50.7.vanilla/App.tsx
+    const loadInitialFonts = async () => {
+        try {
+            const manifestResponse = await fetch('/fonts/manifest.json');
+            if (manifestResponse.ok) {
+                const fontManifest = await manifestResponse.json();
+                if (Array.isArray(fontManifest) && fontManifest.every(f => typeof f.name === 'string' && typeof f.file === 'string')) {
+                   await loadFontsFromManifest(fontManifest);
+                } else {
+                   console.warn('/fonts/manifest.json is missing, empty, or not in the correct format (expected an array of {name, file} objects).');
+                }
+            } else {
+                console.log('No /fonts/manifest.json found. No custom fonts will be loaded.');
+            }
+        } catch (error) {
+            console.error('Error loading custom fonts manifest:', error);
+        }
+        
+        await loadPersistedFonts();
+        await loadSystemFonts();
+    };
+
+    loadInitialFonts();
+  }, [loadSystemFonts]);
+
 
   useEffect(() => {
     if (availableFonts.length > 0) {
