@@ -2,7 +2,21 @@
 <img width="500" height="500" alt="logo" src="https://github.com/user-attachments/assets/4f8b5649-e577-4370-9289-729e8f7e8c07" />
 </div>
 
-## 🇬🇧 Prerequisites
+<div align="center">
+
+# 🌟✨ Comics Magic Translator ✨🌟
+
+**L'app è disponibile online / The app is available online**
+
+[🌐 Apri / Open Comics Magic Translator](https://wolfazzo.github.io/Comics-Magic-Translator/)
+
+---
+</div>
+
+
+
+
+## 🇬🇧 Prerequisites for local install test
 
 1. Install Node.js (including additional components).  
 2. Open the terminal in the main CMT project folder.  
@@ -15,7 +29,7 @@
    Copy the address and paste it into any browser to open the interface.
 ---
 
-## 🇮🇹 Prerequisiti
+## 🇮🇹 Prerequisiti per installazione locale di test
 
 1. Installa Node.js (includendo i componenti aggiuntivi).  
 2. Apri il terminale nella cartella principale del progetto CMT.  
@@ -28,7 +42,7 @@
    Copia l’indirizzo e incollalo in qualsiasi browser per aprire l’interfaccia.
 ---
 
-# 🌍 Comics Magic Translator
+# 🌍 Comics Magic Translator Manual
 
 **Comics Magic Translator** — an AI-assisted tool designed for semi-automatic comic, manga, and webtoon translation (*scanlation*).
 
