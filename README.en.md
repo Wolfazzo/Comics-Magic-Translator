@@ -637,3 +637,92 @@ In the right panel, you can adjust **brightness** and **contrast** in real time 
 > Mastery of selection, box, and formatting tools is the key to achieving professional results.
 ---
 
+# 📦 Chapter 5 — Export and Save
+
+Once the translation and *typesetting* are complete, **Comics Magic Translator** offers several options to export your finished work.  
+The saving modes cover every need: from sharing a single page to archiving an entire chapter or project.
+
+---
+
+## 🖼️ Save the Current Page as a Single Image (PNG, JPG, WebP)
+
+This mode is perfect for quickly saving **a single page**, useful for previews, reviews, or fast sharing.
+
+### 🔧 How to Use
+
+1. Make sure the page you want to save is **active in the Workspace (Canvas)**.  
+2. Open the **Tools Panel**, under the **Export** section.  
+3. Click **Save Current Image**.  
+4. A dialog box will appear with configuration options.
+
+### ⚙️ Export Options
+
+- **Format:**  
+  - **PNG** → lossless quality, ideal for maximum fidelity.  
+  - **JPG** → lossy quality, lighter files.  
+  - **WebP** → modern format with excellent quality-size balance.
+
+- **Quality (for JPG/WebP only):**  
+  A *slider* adjusts quality from **0 to 100**.  
+  Higher values = better quality but heavier files.
+
+### 📤 Result
+
+A **single image file** will be generated, merging all visible elements:  
+the base artwork (including any cleaning or retouches) and the **text boxes** rendered with their final formatting.
+
+---
+
+## 🗂️ Export All Pages into a `.zip` File
+
+Ideal for exporting **an entire chapter or project**, collecting all modified pages into a single compressed archive.
+
+### 🔧 How to Use
+
+1. Open the **Export Panel**.  
+2. Click **Save All as ZIP**.  
+3. In the dialog box, select image format and quality.
+
+### ⚙️ Export Options
+
+Same as for single-page saving:
+
+- **Format:** PNG, JPG, WebP  
+- **Quality:** adjustable via slider (for JPG and WebP)
+
+### 📦 Result
+
+A **`.zip` file** will be generated containing all exported pages.  
+Inside, each page will be saved as an image, keeping its **original filename**.
+
+---
+
+## 📄 Export All Pages as a Single `.pdf` File
+
+This option is perfect for creating a **ready-to-read or shareable document**, automatically arranging all comic pages.
+
+### 🔧 How to Use
+
+1. From the **Export Panel**, click **Save as PDF**.  
+2. The app will render each page as a final image.  
+3. All pages will then be combined into **a single PDF file**, following the order shown in the File Panel.
+
+### ⚙️ Export Options
+
+Same as other modes:
+
+- **Format:** PNG, JPG, or WebP  
+- **Quality:** adjustable for lossy formats
+
+### 📕 Result
+
+A **single `.pdf` file** will be downloaded, where each comic page corresponds to one page in the document.  
+The order will match the **File Panel**, ensuring a coherent and sequential reading experience.
+
+---
+
+> 💡 **Tip:**  
+> Before exporting to ZIP or PDF, make sure all texts are correct and aligned.  
+> The export process saves the current visual state, including all layers and formatting.
+
+---
