@@ -408,3 +408,232 @@ For best results:
 > 🔧 Alternate between **Auto** mode for speed and **Manual** mode for precision.
 
 ---
+
+# 🧩 Chapter 4 — Detailed Features
+
+This chapter explores each feature of the application, explaining in practical terms how to make the best use of every tool to achieve precise and professional results.
+
+---
+
+## 🎯 Selection and Cleanup
+
+Creating accurate selections is the first essential step toward a clean result.  
+These tools allow you to isolate the original text precisely from everything else.
+
+---
+
+### ✨ Using the Magic Wand and Tolerance
+
+The **Magic Wand** is the fastest tool for selecting areas of uniform color, such as black text on a white background.
+
+- **How it works:** click on a pixel of the text; the app will automatically select all adjacent pixels of similar color.  
+- **Tolerance:** adjust sensitivity using the **Tolerance** slider in the Tool Panel:
+  - 🔹 *Low value (e.g., 10):* selects only very similar colors.  
+  - 🔹 *High value (e.g., 100):* includes a broader range of shades.  
+  - 💡 *Tip:* increase tolerance for colored or gradient text.
+
+---
+
+### 🟩 Creating Manual Selections (Add / Subtract Areas)
+
+The **Manual Selection** tool allows you to draw rectangular selections.
+
+- **How it works:** drag your mouse on the image to draw a rectangle.  
+- **Modifier Keys:**
+  - ⬆️ **Shift:** adds the new area to the current selection.  
+  - ⬇️ **Alt:** subtracts the area from the current selection.
+
+---
+
+### 🧽 Refining Selections with the Selection Eraser
+
+The **Selection Eraser** lets you remove unwanted parts of a selection.
+
+- **Use:** click and drag to erase portions of the selection.  
+- **Purpose:** perfect for separating merged letters or refining complex edges.  
+- **Settings:** the eraser size is adjustable in the Tool Panel.
+
+---
+
+### 🎨 Inpainting (Automatic and Manual)
+
+**Inpainting (Fill)** removes the original text and reconstructs the background.
+
+- 🧠 **Automatic Mode (Auto-Color):** analyzes edges to rebuild realistic textures and gradients.  
+- 🎛️ **Manual Mode:** fills the selection with a solid color chosen manually — perfect for uniform balloons.
+
+---
+
+### 🔁 Clearing and Recalling the Last Selection
+
+- ❌ **Clear Selection:** removes any active selection.  
+- ♻️ **Recall Selection:** reactivates the last used selection — useful after OCR to immediately perform inpainting.
+
+---
+
+## 🧱 Box Management
+
+“Boxes” are the core elements of the entire workflow.  
+They are divided into two categories: **OCR Boxes** (text extraction) and **Text Boxes** (translated text).
+
+---
+
+### 📦 Creating OCR Boxes and Text Boxes
+
+- **OCR Boxes**
+  - ✋ Manual → create a selection → click **OCR**.  
+  - ⚙️ Automatic → create a selection → click **Auto**.  
+  - 🎨 Appearance: dashed amber border.  
+
+- **Text Boxes**
+  - ⚙️ Automatic → generated after **Translate** or **Auto**.  
+  - ✍️ Manual → click **Add Text** to create an empty one.  
+  - 🎨 Appearance: green border when selected.
+
+---
+
+### 🖱️ Selecting, Moving, and Resizing Boxes
+
+- **Select:** single click to select; **Shift** for multiple selections.  
+- **Move:** drag the box to reposition it.  
+- **Resize:** use the corner handles.  
+- **Rotate:** drag the circular handle above the box.
+
+---
+
+### ✏️ Inline Text Editing
+
+Double-click a **Text Box** to edit it directly on the canvas.  
+Press **Esc** or click outside the box to end inline editing.
+
+---
+
+### ✂️ Splitting a Text Box
+
+Useful for dividing a sentence into multiple balloons.
+
+1. Select the box.  
+2. Place the cursor in the desired point within the **Text Preview**.  
+3. Click **Split Box** → the text divides into two separate boxes, preserving style.
+
+---
+
+## 🅰️ Advanced Text Formatting
+
+The **Text Formatting Panel** allows full control over the appearance of translated text.
+
+---
+
+### 🎨 Applying Styles (Font, Size, Color, Outline)
+
+- **Font and Size:** dropdown menu and numeric field.  
+- **Color and Outline:** color pickers and outline thickness.  
+  - 🖍️ Thickness 0 → no outline.
+
+---
+
+### 🔠 Quick Typographic Styles
+
+- **B / I:** bold and italic.  
+- **Aa:** toggle uppercase/lowercase.  
+- **A²:** superscript for notes or sound effects.
+
+---
+
+### 🧭 Alignment and Spacing
+
+- 🧍‍♂️ **Alignment:** left / center / right.  
+- 📏 **Line Spacing:** adjusts vertical distance between lines.  
+- ↔️ **Word Spacing:** adjusts horizontal distance between words.
+
+---
+
+### ⚡ Quick Styles (F1 / F2)
+
+- 💾 **Save a Style:**  
+  Select a box → **Shift + F1/F2** → the style is saved.  
+- 🎯 **Apply a Style:**  
+  Select a box → **F1/F2** → apply the saved style.
+
+---
+
+### 🔄 Importing and Exporting Translated Text (.json)
+
+- ⬇️ **Export:** generates a `.json` file with all translated texts.  
+- ⬆️ **Import:** updates text boxes by loading a `.json` file with the same IDs.
+
+---
+
+## 🎨 Drawing and Retouching
+
+For manual corrections or background reconstruction, the drawing tools offer full control.
+
+---
+
+### 🖌️ Using the Brush and Eraser
+
+- **Brush:** paints directly on the image.  
+- **Eraser:** removes unwanted parts, making them transparent.  
+- 💡 Ideal for touch-ups after inpainting.
+
+---
+
+### ⚙️ Tool Options
+
+When activating Brush or Eraser, you can adjust:
+
+- 🎨 **Color (Brush only)**  
+- ⚫ **Size**  
+- 🪶 **Hardness**  
+- 🌫️ **Opacity**
+
+---
+
+## 🖼️ Modal Image Editor
+
+The Image Editor provides advanced tools for focused edits on portions or layers.
+
+---
+
+### 🚪 How to Open
+
+- **From Selection:** create an area → click **Image Editor**.  
+- **From Image Layer:** select a layer → click **Image Editor**.
+
+---
+
+### 🧰 Editor Tools
+
+- 🖌️ **Brush / Eraser / Eyedropper**  
+- ✂️ **Lasso Erase:** draw a freeform shape to erase.  
+- 🪄 **Magic Brush:** restores original areas of the image.
+
+---
+
+### 🔍 Image Transformations
+
+- 🖐️ **Move:** drag to reposition.  
+- 🧭 **Zoom:** use the mouse wheel.  
+- 🔄 **Rotate:** hold **Shift** and scroll to rotate.  
+- 🔁 **Reset Transform:** restores the original state.
+
+---
+
+### 🌞 Adjustments: Brightness and Contrast
+
+In the right panel, you can adjust **brightness** and **contrast** in real time to balance image tones.
+
+---
+
+### ✅ Applying or Canceling Changes
+
+- 💾 **Apply:** confirms and merges changes into the main canvas.  
+- ❎ **Cancel:** closes the editor without saving.
+
+---
+
+> 🧭 **Final Note:**  
+> The features described in this chapter form the operational foundation for comic typesetting and post-production.  
+> Mastery of selection, box, and formatting tools is the key to achieving professional results.
+---
+
