@@ -724,3 +724,95 @@ L’ordine rispetterà quello mostrato nel **Pannello File**, garantendo una let
 > 💡 **Suggerimento:**  
 > Prima di esportare in ZIP o PDF, assicurati che i testi siano corretti e allineati.  
 > L’esportazione salverà lo stato visivo attuale, inclusi tutti i livelli e formattazioni.
+
+---
+
+# 🪟 Capitolo 6 — Finestre Ausiliarie
+
+Oltre ai pannelli principali, **Comics Magic Translator** include diverse **finestre ausiliarie flottanti e ridimensionabili**, pensate per assistere nel processo di traduzione senza ingombrare l’area di lavoro principale.
+
+---
+
+## 🖼️ Visualizzatore Immagine Originale
+
+Questa finestra è uno strumento indispensabile per il **controllo qualità**.  
+Permette di visualizzare la **pagina originale**, non modificata, accanto alla versione attiva nel *canvas principale*.
+
+### 🎯 Scopo
+
+- **Confronto diretto:**  
+  Visualizza affiancate la versione tradotta e quella originale, utile per verificare fedeltà e posizionamento del testo.
+
+- **Verifica della pulizia:**  
+  Aiuta a controllare che il processo di *inpainting* abbia rimosso completamente il testo sorgente senza artefatti o sbavature.
+
+- **Riferimento per il ritocco:**  
+  Durante il ritocco manuale, consente di replicare texture e colori osservando l’originale in tempo reale.
+
+### ⚙️ Funzionamento
+
+- **Apertura:**  
+  Si apre cliccando su **Confronta con Originale (Compare with Original)**, situato nell’intestazione dell’applicazione.
+
+- **Finestra Flottante:**  
+  Appare come un **pannello indipendente** che può essere spostato liberamente trascinando la sua barra del titolo.
+
+- **Navigazione Indipendente:**  
+  All’interno, l’immagine può essere:  
+  - **Ingrandita** con la rotellina del mouse  
+  - **Spostata** trascinando con il tasto sinistro  
+  Questi controlli sono indipendenti dal canvas principale, permettendo di zoomare in aree diverse tra le due viste.
+
+- **Chiusura:**  
+  Si chiude cliccando sull’icona **“X”** nell’intestazione della finestra.
+
+---
+
+## 📝 Note di Progetto
+
+Il **Pannello Note** è un **blocco appunti integrato** pensato per annotare informazioni utili durante la traduzione o l’impaginazione.
+
+### 🎯 Scopo
+
+- **Appunti di traduzione:**  
+  Per registrare termini specifici, decisioni stilistiche o frasi da rivedere.
+
+- **Promemoria di typesetting:**  
+  Annotazioni su font da utilizzare, allineamenti da sistemare o aree da ritoccare in seguito.
+
+- **Collaborazione:**  
+  In un team di lavoro, le note permettono di lasciare messaggi al **revisore (proofreader)** o al **quality checker**.
+
+### ⚙️ Funzionamento
+
+- **Apertura e gestione:**  
+  Si apre tramite l’icona a forma di **nota** situata sul lato del canvas.  
+  È una finestra flottante spostabile liberamente sullo schermo.
+
+- **Creazione di note:**  
+  Cliccando su **Aggiungi Nota (Add Note)** si genera un nuovo riquadro editabile.
+
+- **Livelli di importanza:**  
+  Ogni nota può essere classificata come:  
+  - 🟢 **Normale**  
+  - 🟡 **Importante**  
+  - 🔴 **Critica**  
+  Il colore del bordo cambia in base alla priorità, rendendo immediata l’identificazione visiva.
+
+- **Salvataggio automatico:**  
+  Tutte le note vengono incluse nel file di progetto `.cmt.zip` quando si utilizza la funzione **Salva Progetto**.
+
+- **Import/Export:**  
+  Le note possono essere esportate in un file `.json` per la condivisione o la modifica esterna.  
+  Successivamente, possono essere **reimportate nel progetto**.  
+  Questa funzione è particolarmente utile per i traduttori e typesetter che lavorano separatamente.
+
+---
+
+> 💡 **Suggerimento:**  
+> Mantieni il Visualizzatore Originale e il Pannello Note aperti durante la revisione finale.  
+> Ti aiuteranno a garantire coerenza visiva e linguistica in tutto il capitolo.
+
+---
+
+
