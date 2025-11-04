@@ -915,3 +915,100 @@ Adapt the workspace to your preferences and screen size.
 
 ---
 
+# ⌨️ Chapter 8 — Keyboard and Mouse Shortcuts
+
+To maximize efficiency and speed, **Comics Magic Translator** includes numerous shortcuts.  
+Learning them drastically reduces working time, minimizing the need to navigate through menus.
+
+> 💡 **Note for macOS users:** Replace **Ctrl** with **Cmd** in all shortcuts.
+
+---
+
+## 🖼️ Canvas Navigation
+
+| Action | Shortcut | Description |
+|--------|-----------|-------------|
+| Pan (Move View) | Ctrl + Drag Mouse | Moves the canvas view without changing the active tool. |
+| Zoom | Mouse Wheel | Zooms in or out of the canvas. |
+| Zoom to 100% | Ctrl + 1 | Instantly sets the zoom level to 100% (real pixel size). |
+
+---
+
+## 🟢 Selection Management
+
+| Action | Shortcut | Description |
+|--------|-----------|-------------|
+| Add to Selection | Shift + Use Tool | With Magic Wand or Manual Selection, adds the new area to the existing one. |
+| Subtract from Selection | Alt + Use Tool | Removes the new area from the current selection. |
+| Clear Selection | Esc or \ | Deselects the active area or all boxes if no selection is active. |
+
+---
+
+## 📦 Box Management (Text, OCR, Image)
+
+| Action | Shortcut | Description |
+|--------|-----------|-------------|
+| Multi-Select | Shift + Click on Box | Adds or removes a box from the multi-selection. |
+| Move Box (Nudge) | Arrow Keys | Moves selected boxes by 1 pixel. |
+| Move Box (Fast Nudge) | Shift + Arrow Keys | Moves selected boxes by 10 pixels. |
+| Delete Selected Boxes | Del or Backspace | Deletes all selected boxes. |
+| Deselect All Boxes | Esc or \ | Removes selection from all boxes. |
+
+---
+
+## ⚡ Main Workflows
+
+| Action | Shortcut | Description |
+|--------|-----------|-------------|
+| Run "Auto" | Alt + A | Runs the automatic process on the selection or all OCR boxes. |
+| Run OCR | Alt + O | Performs OCR on the selection or all OCR boxes. |
+| Run Translation | Alt + T | Translates all OCR boxes on the current page. |
+| Fill Selection (Inpaint) | Del or Backspace | Performs inpainting on the selected area if no box is active. |
+
+---
+
+## 📝 Text Formatting
+
+| Action | Shortcut | Description |
+|--------|-----------|-------------|
+| Save Quick Style 1 | Shift + F1 | Saves the selected text style to quick slot 1. |
+| Apply Quick Style 1 | F1 | Applies style from quick slot 1 to selected text. |
+| Save Quick Style 2 | Shift + F2 | Saves the selected text style to quick slot 2. |
+| Apply Quick Style 2 | F2 | Applies style from quick slot 2 to selected text. |
+| Save Quick Style 3 | Shift + F3 | Saves the selected text style to quick slot 3. |
+| Apply Quick Style 3 | F3 | Applies style from quick slot 3 to selected text. |
+---
+
+## 🎨 Drawing and Cleanup
+
+| Action | Shortcut | Description |
+|--------|-----------|-------------|
+| Straight Line | Shift + Drag Brush | Draws a straight line from the last click to the current brush position. |
+| Enable Brush | Alt + B | Activates the brush tool. If already active: `Alt + R` = red brush, `Alt + W` = white brush. |
+| Clear All Brush Strokes | Shift + Ctrl + X | Removes all brush and eraser strokes from the current page. |
+
+---
+
+## 🖌️ Image Editor Window
+
+These shortcuts are active only when the **Image Editor** is open and in focus.
+
+| Action | Shortcut | Description |
+|--------|-----------|-------------|
+| Pan Editor View | Ctrl + Drag Mouse | Moves the view inside the editor. |
+| Zoom Editor View | Mouse Wheel | Zooms in or out within the editor. |
+| Rotate Image | Shift + Mouse Wheel | Rotates the active image layer. |
+| Move Image | Arrow Keys | Moves the image by 1 pixel. |
+| Move Image (Fast) | Shift + Arrow Keys | Moves the image by 10 pixels. |
+| Close Editor | Esc | Closes the editor and discards changes. |
+
+---
+
+## 🌟 General
+
+| Action | Shortcut | Description |
+|--------|-----------|-------------|
+| Undo | Ctrl + Z | Undoes the last action performed (main canvas or editor). |
+| Redo | Ctrl + Y | Redoes the last undone action. |
+
+---
