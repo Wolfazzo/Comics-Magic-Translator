@@ -916,5 +916,99 @@ Adatta l’area di lavoro alle tue preferenze e dimensioni dello schermo.
 
   ---
 
-  
+  # ⌨️ Capitolo 8 — Scorciatoie da Tastiera e Mouse
+
+Per massimizzare l'efficienza e la velocità, **Comics Magic Translator** integra numerose scorciatoie.  
+Impararle riduce drasticamente i tempi di lavoro, minimizzando l'interazione con i menu.
+
+> 💡 **Nota per utenti macOS:** Sostituire **Ctrl** con **Cmd** in tutte le scorciatoie.
+
+---
+
+## 🖼️ Navigazione nel Canvas
+
+| Azione | Scorciatoia | Descrizione |
+|--------|--------------|-------------|
+| Pan (Sposta Vista) | Ctrl + Trascina Mouse | Sposta la visuale sull'immagine senza cambiare lo strumento attivo. |
+| Zoom | Rotellina del Mouse | Ingrandisce o rimpicciolisce la vista del canvas. |
+| Zoom al 100% | Ctrl + 1 | Imposta istantaneamente il livello di zoom al 100% (dimensione reale dei pixel). |
+
+---
+
+## 🟢 Gestione della Selezione
+
+| Azione | Scorciatoia | Descrizione |
+|--------|--------------|-------------|
+| Aggiungi alla Selezione | Shift + Usa Strumento | Con Bacchetta Magica o Selezione Manuale, aggiunge la nuova area a quella già selezionata. |
+| Sottrai dalla Selezione | Alt + Usa Strumento | Rimuove l’area della nuova selezione da quella esistente. |
+| Cancella Selezione | Esc o \ | Cancella la selezione attiva o deseleziona tutti i box se non ci sono selezioni attive. |
+
+---
+
+## 📦 Gestione dei Box (Testo, OCR, Immagine)
+
+| Azione | Scorciatoia | Descrizione |
+|--------|--------------|-------------|
+| Selezione Multipla | Shift + Click su Box | Aggiunge o rimuove un box dalla selezione multipla. |
+| Sposta Box (Nudge) | Tasti Freccia | Sposta i box selezionati di 1 pixel nella direzione della freccia. |
+| Sposta Box (Nudge Veloce) | Shift + Tasti Freccia | Sposta i box selezionati di 10 pixel. |
+| Elimina Box Selezionati | Canc o Backspace | Elimina tutti i box selezionati. |
+| Deseleziona Tutti i Box | Esc o \ | Rimuove la selezione da tutti i box. |
+
+---
+
+## ⚡ Processi Principali (Flussi di Lavoro)
+
+| Azione | Scorciatoia | Descrizione |
+|--------|--------------|-------------|
+| Esegui "Auto" | Alt + A | Avvia il processo automatico sulla selezione o su tutti i box OCR. |
+| Esegui OCR | Alt + O | Esegue l’OCR sulla selezione o su tutti i box OCR. |
+| Esegui Traduzione | Alt + T | Avvia la traduzione per tutti i box OCR presenti sulla pagina. |
+| Riempi Selezione (Inpaint) | Canc o Backspace | Esegue l’inpainting sull’area di selezione se nessun box è attivo. |
+
+---
+
+## 📝 Formattazione del Testo
+
+| Azione | Scorciatoia | Descrizione |
+|--------|--------------|-------------|
+| Salva Stile Rapido 1 | Shift + F1 | Salva lo stile del testo selezionato nello slot rapido 1. |
+| Applica Stile Rapido 1 | F1 | Applica lo stile salvato nello slot 1 al testo selezionato. |
+| Salva Stile Rapido 2 | Shift + F2 | Salva lo stile del testo selezionato nello slot rapido 2. |
+| Applica Stile Rapido 2 | F2 | Applica lo stile salvato nello slot 2 al testo selezionato. |
+| Salva Stile Rapido 3 | Shift + F3 | Salva lo stile del testo selezionato nello slot rapido 3. |
+| Applica Stile Rapido 3 | F3 | Applica lo stile salvato nello slot 3 al testo selezionato. |
+---
+
+## 🎨 Disegno e Pulizia
+
+| Azione | Scorciatoia | Descrizione |
+|--------|--------------|-------------|
+| Linea Retta | Shift + Trascina Pennello | Crea una linea retta dal punto dell’ultimo click del pennello alla posizione corrente. |
+| Abilita Pennello | Alt + B | Attiva lo strumento pennello. Se già attivo: `Alt + R` = pennello rosso, `Alt + W` = pennello bianco. |
+| Cancella Tutti i Tratti | Shift + Ctrl + X | Rimuove tutti i tratti di pennello e gomma dalla pagina corrente. |
+
+---
+
+## 🖌️ Finestra Modale (Editor Immagine)
+
+Queste scorciatoie sono attive solo quando l’**Editor di Immagini** è aperto e in primo piano.
+
+| Azione | Scorciatoia | Descrizione |
+|--------|--------------|-------------|
+| Pan Vista Editor | Ctrl + Trascina Mouse | Sposta la visuale all’interno dell’editor. |
+| Zoom Vista Editor | Rotellina del Mouse | Ingrandisce o rimpicciolisce la vista dell’immagine. |
+| Ruota Immagine | Shift + Rotellina Mouse | Ruota l’immagine del livello attivo. |
+| Sposta Immagine | Tasti Freccia | Sposta l’immagine di 1 pixel. |
+| Sposta Immagine (Veloce) | Shift + Tasti Freccia | Sposta l’immagine di 10 pixel. |
+| Chiudi Editor | Esc | Chiude l’editor scartando le modifiche. |
+
+---
+
+## 🌟 Generali
+
+| Azione | Scorciatoia | Descrizione |
+|--------|--------------|-------------|
+| Annulla | Ctrl + Z | Annulla l’ultima azione eseguita (canvas principale o editor). |
+| Ripristina | Ctrl + Y | Ripristina l’ultima azione annullata. |
 
