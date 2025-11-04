@@ -815,4 +815,106 @@ Il **Pannello Note** è un **blocco appunti integrato** pensato per annotare inf
 
 ---
 
+# ⚙️ Capitolo 7 — Impostazioni e Preferenze
+
+La finestra delle **Impostazioni** (o Preferenze), accessibile tramite l'icona a forma di **ingranaggio** nell’intestazione, è il centro di controllo per **personalizzare ogni aspetto di Comics Magic Translator**.  
+Qui puoi adattare l’applicazione al tuo flusso di lavoro, gestire lingue, font e molto altro.  
+Le impostazioni sono organizzate in **profili** per garantire la massima flessibilità.
+
+---
+
+## 🗂️ Gestione dei Profili
+
+Un **profilo** è un insieme salvato di tutte le impostazioni dell’app.  
+Puoi creare profili diversi per fumetti diversi (es. manga B/N, webtoon a colori) o per ruoli diversi (traduttore, typesetter).
+
+### 🔹 Creare un Profilo
+
+1. Vai alla sezione **Profili (Profiles)**.  
+2. Le impostazioni visualizzate appartengono al **profilo attivo**, selezionato nel menu a tendina.  
+3. Per creare un nuovo profilo basato su quello attuale, inserisci un nome nel campo **Nuovo nome profilo… (New profile name…)**.  
+4. Clicca **Salva come Nuovo Profilo (Save as New Profile)**. Il nuovo profilo diventerà subito quello attivo.
+
+### 🔹 Salvare, Importare ed Esportare Profili
+
+- **Selezione del Profilo Attivo:** Usa il menu a tendina per scegliere quale profilo modificare. Tutte le modifiche nelle altre sezioni delle impostazioni si applicheranno a questo profilo.  
+- **Salvataggio:** Le modifiche a un profilo vengono salvate automaticamente cliccando su **Salva & Chiudi (Save & Close)**.  
+- **Esportazione:** Clicca su **Esporta Profilo (Export Profile)** per generare un file `.prof` da condividere o archiviare.  
+- **Importazione:** Clicca su **Importa Profilo (Import Profile)** per caricare un file `.prof`. Se l’ID del profilo esiste già, l’app chiederà conferma per sovrascriverlo.
+
+---
+
+## 🌐 Impostazioni di Traduzione
+
+Questa sezione controlla le lingue utilizzate dall’app.
+
+- **Lingua di Destinazione Predefinita (Default Target Language):**  
+  Imposta la lingua in cui desideri tradurre i fumetti.  
+  Questa sarà la lingua predefinita dei pulsanti **Traduci** e **Auto**, modificabile al volo dalla barra strumenti.
+
+- **Lingua Interfaccia (Interface Language):**  
+  Modifica la lingua di menu, pulsanti ed etichette dell’applicazione.
+
+---
+
+## 🔑 Configurazione della Chiave API
+
+Per usare le funzionalità AI di **OCR e traduzione**, è necessario fornire una chiave API per **Google Gemini**.
+
+### 🔹 Ottenere una Chiave API
+
+- Visita **Google AI Studio** per ottenere una chiave gratuita.
+
+### 🔹 Come Impostarla
+
+1. Vai alla sezione **Chiave API (API Key)**.  
+2. Incolla la chiave nel campo di testo. La chiave viene salvata localmente nel browser.  
+3. Clicca **Salva Chiave API**.  
+4. **Fallback:** Se non viene inserita una chiave nel browser, l’app cercherà di usare quella presente in un file `.env.local` nella cartella del progetto (opzione per sviluppatori).
+
+---
+
+## 🔤 Gestione dei Caratteri (Font)
+
+Questa sezione permette di **gestire i font disponibili** per il typesetting, incluse le tue aggiunte personalizzate.
+
+### 🔹 Caricare Font
+
+- **Carica Caratteri di Sistema (Load System Fonts):**  
+  Se supportato dal browser, permette di aggiungere font installati sul computer. I font vengono salvati nel database del browser per usi futuri.
+
+- **Carica File Carattere (Load Font Files):**  
+  Carica file `.ttf`, `.otf`, `.woff` direttamente dal computer.
+
+- **Cancella Font Archiviati (Clear Stored Fonts):**  
+  Rimuove tutti i font caricati manualmente o da sistema.
+
+### 🔹 Selezionare i Font Visibili
+
+- L’elenco mostra tutti i font disponibili (predefiniti, di sistema e caricati).  
+- Spunta/deseleziona le caselle per decidere quali font appaiono nel menu **FontSelector** del Pannello Strumenti.  
+- Usa **Seleziona Tutto / Deseleziona Tutto** per modifiche rapide.
+
+---
+
+## 🖥️ Personalizzazione del Layout
+
+Adatta l’area di lavoro alle tue preferenze e dimensioni dello schermo.
+
+- **Larghezza Pannelli (Panel Widths):**  
+  Imposta la larghezza percentuale per i tre pannelli principali:  
+  - Sinistra (File/Livelli)  
+  - Centro (Canvas)  
+  - Destra (Strumenti)  
+  La larghezza del pannello centrale si calcola automaticamente.
+
+- **Altezza Aree di Testo (Text Area Heights):**  
+  Imposta l’altezza in pixel per le aree **Testo Sorgente** e **Testo di Visualizzazione**. Utile per testi lunghi.
+
+- **Ripristina Layout (Reset Layout):**  
+  Ripristina le impostazioni di larghezza e altezza ai valori predefiniti.
+
+  ---
+
+  
 
