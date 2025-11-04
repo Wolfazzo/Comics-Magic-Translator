@@ -409,3 +409,231 @@ Per ottenere i migliori risultati:
 
 ---
 
+# 🧩 Capitolo 4 — Funzionalità Dettagliate
+
+Questo capitolo approfondisce le singole funzioni dell’applicazione, spiegando in modo operativo come sfruttare al meglio ogni strumento per ottenere risultati precisi e professionali.
+
+---
+
+## 🎯 Selezione e Pulizia
+
+La creazione di selezioni accurate è il primo passo fondamentale per un buon risultato.  
+Questi strumenti permettono di isolare con precisione il testo originale da tutto il resto.
+
+---
+
+### ✨ Uso della Bacchetta Magica e della Tolleranza
+
+La **Bacchetta Magica (Magic Wand)** è lo strumento più rapido per selezionare aree di colore uniforme, come il testo nero su sfondo bianco.
+
+- **Funzionamento:** clicca su un pixel del testo; l’app selezionerà automaticamente tutti i pixel adiacenti di colore simile.  
+- **Tolleranza:** controlla la sensibilità tramite il cursore **Tolerance** nel Pannello Strumenti:
+  - 🔹 *Valore basso (es. 10):* seleziona solo colori molto simili.  
+  - 🔹 *Valore alto (es. 100):* include una gamma più ampia di sfumature.  
+  - 💡 *Suggerimento:* aumenta la tolleranza per testo colorato o con gradienti.
+
+---
+
+### 🟩 Creazione di Selezioni Manuali (Aggiungere / Sottrarre Aree)
+
+Lo strumento **Selezione Manuale (Manual Selection)** permette di disegnare selezioni rettangolari.
+
+- **Funzionamento:** trascina il mouse sull’immagine per disegnare il rettangolo.  
+- **Tasti Modificatori:**
+  - ⬆️ **Shift:** aggiunge la nuova area alla selezione corrente.  
+  - ⬇️ **Alt:** sottrae l’area dalla selezione corrente.
+
+---
+
+### 🧽 Rifinire le Selezioni con la Gomma per Selezione
+
+La **Gomma per Selezione (Selection Eraser)** consente di rimuovere parti indesiderate della selezione.
+
+- **Uso:** clicca e trascina per cancellare porzioni di selezione.  
+- **Utilità:** perfetta per separare lettere unite o rifinire bordi complessi.  
+- **Impostazioni:** la dimensione della gomma è regolabile nel Pannello Strumenti.
+
+---
+
+### 🎨 Funzionamento dell’Inpainting (Automatico e Manuale)
+
+L’**Inpainting (Riempi)** rimuove il testo originale e ricostruisce lo sfondo.
+
+- 🧠 **Modalità Automatica (Auto-Color):** analizza i bordi per ricostruire texture e gradienti realistici.  
+- 🎛️ **Modalità Manuale:** riempie la selezione con un colore solido scelto manualmente — perfetto per balloon uniformi.
+
+---
+
+### 🔁 Cancellare e Richiamare l’Ultima Selezione
+
+- ❌ **Cancella Selezione (Clear Selection):** rimuove ogni selezione attiva.  
+- ♻️ **Richiama Selezione (Recall Selection):** riattiva l’ultima selezione usata, utile dopo un OCR per eseguire subito l’Inpainting.
+
+---
+
+## 🧱 Gestione dei Box
+
+I “box” sono gli elementi fondamentali su cui si basa l’intero flusso di lavoro.  
+Si dividono in due categorie: **Box OCR** (estrazione testo) e **Box di Testo** (testo tradotto).
+
+---
+
+### 📦 Creazione di Box OCR e Box di Testo
+
+- **Box OCR**
+  - ✋ Manuale → crea una selezione → premi **OCR**.  
+  - ⚙️ Automatico → crea una selezione → premi **Auto**.  
+  - 🎨 Aspetto: bordo tratteggiato color ambra.  
+
+- **Box di Testo**
+  - ⚙️ Automatico → generati dopo **Traduci** o **Auto**.  
+  - ✍️ Manuale → premi **Aggiungi Testo** per crearne uno vuoto.  
+  - 🎨 Aspetto: bordo verde alla selezione.
+
+---
+
+### 🖱️ Selezione, Spostamento e Ridimensionamento dei Box
+
+- **Selezione:** clic singolo per selezionare; **Shift** per selezioni multiple.  
+- **Spostamento:** trascina il box per riposizionarlo.  
+- **Ridimensionamento:** usa le maniglie agli angoli.  
+- **Rotazione:** trascina la maniglia circolare superiore.
+
+---
+
+### ✏️ Modifica del Testo in Linea
+
+Doppio click su un **Box di Testo** per modificarlo direttamente nel canvas.  
+Premi **Esc** o clicca fuori dal box per terminare la modifica inline.
+
+---
+
+### ✂️ Divisione di un Box di Testo
+
+Utile per dividere una frase in più balloon.
+
+1. Seleziona il box.  
+2. Posiziona il cursore nel punto desiderato nel **Testo di Visualizzazione**.  
+3. Premi **Dividi Box** → il testo si separa in due box distinti, mantenendo lo stile.
+
+---
+
+## 🅰️ Formattazione Avanzata del Testo
+
+Il **Pannello di Formattazione Testo** consente un controllo totale sull’aspetto del testo tradotto.
+
+---
+
+### 🎨 Applicare Stili (Font, Dimensione, Colore, Contorno)
+
+- **Font e Dimensione:** menu a tendina e campo numerico.  
+- **Colore e Contorno:** selettori colore e spessore del bordo.
+  - 🖍️ Spessore 0 → nessun contorno.  
+
+---
+
+### 🔠 Stili Tipografici Rapidi
+
+- **B / I:** grassetto e corsivo.  
+- **Aa:** alterna maiuscole/minuscole.  
+- **A²:** apice per note o effetti sonori.
+
+---
+
+### 🧭 Allineamento e Spaziatura
+
+- 🧍‍♂️ **Allineamento:** sinistra / centro / destra.  
+- 📏 **Interlinea (Line Spacing):** regola la distanza verticale tra le righe.  
+- ↔️ **Spaziatura Parole (Word Spacing):** modifica la distanza orizzontale tra parole.
+
+---
+
+### ⚡ Stili Rapidi (F1 / F2)
+
+- 💾 **Salvare uno Stile:**  
+  Seleziona un box → **Shift + F1/F2** → lo stile viene salvato.  
+- 🎯 **Applicare uno Stile:**  
+  Seleziona un box → **F1/F2** → applica lo stile salvato.
+
+---
+
+### 🔄 Importazione ed Esportazione del Testo Tradotto (.json)
+
+- ⬇️ **Esporta:** genera un file `.json` con tutti i testi tradotti.  
+- ⬆️ **Importa:** aggiorna i box testo caricando un file `.json` con gli stessi ID.
+
+---
+
+## 🎨 Disegno e Ritocco
+
+Per correzioni manuali o ricostruzioni di sfondi, gli strumenti di disegno offrono controllo totale.
+
+---
+
+### 🖌️ Uso del Pennello e della Gomma
+
+- **Pennello (Brush):** disegna direttamente sull’immagine.  
+- **Gomma (Eraser):** cancella parti indesiderate rendendole trasparenti.  
+- 💡 Ideale per ritocchi dopo l’inpainting.
+
+---
+
+### ⚙️ Opzioni Strumenti
+
+Quando attivi Pennello o Gomma, puoi regolare:
+
+- 🎨 **Colore (solo Pennello)**  
+- ⚫ **Dimensione (Size)**  
+- 🪶 **Durezza (Hardness)**  
+- 🌫️ **Opacità (Opacity)**
+
+---
+
+## 🖼️ Editor di Immagini Modale
+
+L’Editor di Immagini offre strumenti avanzati per modifiche mirate su porzioni o livelli.
+
+---
+
+### 🚪 Come Aprirlo
+
+- **Da Selezione:** crea un’area → premi **Editor Immagine**.  
+- **Da Livello Immagine:** seleziona il livello → premi **Editor Immagine**.
+
+---
+
+### 🧰 Strumenti dell’Editor
+
+- 🖌️ **Pennello / Gomma / Contagocce**  
+- ✂️ **Lazo (Lasso Erase):** disegna una forma libera da cancellare.  
+- 🪄 **Pennello Magico (Magic Brush):** ripristina aree originali dell’immagine.
+
+---
+
+### 🔍 Trasformazioni Immagine
+
+- 🖐️ **Sposta:** trascina per riposizionare.  
+- 🧭 **Zoom:** usa la rotellina.  
+- 🔄 **Rotazione:** tieni **Shift** e ruota con la rotellina.  
+- 🔁 **Resetta Trasformazione:** ripristina lo stato originale.
+
+---
+
+### 🌞 Regolazioni: Luminosità e Contrasto
+
+Nel pannello destro puoi regolare in tempo reale **luminosità** e **contrasto** per uniformare i toni di immagine.
+
+---
+
+### ✅ Applicare o Annullare le Modifiche
+
+- 💾 **Applica (Apply):** conferma e fonde le modifiche nel canvas principale.  
+- ❎ **Annulla (Cancel):** chiude l’editor senza salvare i cambiamenti.
+
+---
+
+> 🧭 **Nota Finale:**  
+> Le funzionalità illustrate in questo capitolo costituiscono la base operativa per il typesetting e la post-produzione dei fumetti tradotti.  
+> L’esperienza e la pratica con gli strumenti di selezione, box e formattazione sono la chiave per risultati professionali.
+
+---
