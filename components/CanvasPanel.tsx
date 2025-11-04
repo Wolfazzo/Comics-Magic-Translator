@@ -185,7 +185,7 @@ useEffect(() => {
   useEffect(() => {
     const fetchConfigAndLoadLogo = async () => {
         try {
-            const response = await fetch('/config.json');
+            const response = await fetch('config.json');
             if (!response.ok) {
                 console.error(`config.json not found or failed to load: ${response.statusText}`);
                 return;
@@ -196,12 +196,12 @@ useEffect(() => {
                 setBackgroundConfig({ path: config.backgroundLogoPath, opacity: config.backgroundOpacity });
                 
                 const img = new Image();
-                img.src = config.backgroundLogoPath;
+                img.src = config.backgroundLogoPath;  // ✅ Usa direttamente il percorso da config.json
                 img.onload = () => {
                     setBackgroundLogo(img);
                 };
                 img.onerror = () => {
-                    console.error(`Failed to load background logo from path: ${config.backgroundLogoPath}`);
+                    console.error(`Failed to load background logo from path: ${img.src}`);
                 };
             } else {
                 console.warn('config.json is missing backgroundLogoPath or backgroundOpacity properties.');
