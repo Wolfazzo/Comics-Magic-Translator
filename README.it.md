@@ -637,3 +637,90 @@ Nel pannello destro puoi regolare in tempo reale **luminosità** e **contrasto**
 > L’esperienza e la pratica con gli strumenti di selezione, box e formattazione sono la chiave per risultati professionali.
 
 ---
+# 📦 Capitolo 5 — Esportazione e Salvataggio
+
+Una volta completata la traduzione e il *typesetting*, **Comics Magic Translator** offre diverse opzioni per esportare il lavoro finito.  
+Le modalità di salvataggio coprono tutte le esigenze: dalla semplice condivisione di una singola pagina all’archiviazione di un intero capitolo o progetto.
+
+---
+
+## 🖼️ Salvataggio della pagina corrente come immagine singola (PNG, JPG, WebP)
+
+Questa modalità è perfetta per salvare rapidamente **una sola pagina**, utile per anteprime, revisioni o condivisione veloce.
+
+### 🔧 Come si usa
+
+1. Assicurati che la pagina da salvare sia **attiva nell’Area di Lavoro (Canvas)**.  
+2. Apri il **Pannello Strumenti**, nella sezione **Esporta (Export)**.  
+3. Clicca su **Salva Immagine Corrente**.  
+4. Si aprirà una finestra di dialogo con le opzioni di configurazione.
+
+### ⚙️ Opzioni di Esportazione
+
+- **Formato:**  
+  - **PNG** → qualità senza perdita, ideale per la massima fedeltà.  
+  - **JPG** → qualità con perdita, file più leggeri.  
+  - **WebP** → formato moderno con ottimo bilanciamento tra qualità e dimensioni.
+
+- **Qualità (solo per JPG/WebP):**  
+  Uno *slider* regola la qualità da **0 a 100**.  
+  Valori più alti = qualità migliore, ma file più pesante.
+
+### 📤 Risultato
+
+Verrà scaricato **un singolo file immagine**, fusione completa di tutti gli elementi visibili:  
+l’immagine di base (con eventuali ritocchi o pulizie) e i **box di testo** renderizzati con la loro formattazione finale.
+
+---
+
+## 🗂️ Esportazione di tutte le pagine in un file `.zip`
+
+Funzione ideale per esportare **un intero capitolo o progetto**, raccogliendo tutte le pagine modificate in un unico archivio compresso.
+
+### 🔧 Come si usa
+
+1. Apri il **Pannello Esporta**.  
+2. Clicca su **Salva Tutto in ZIP**.  
+3. Nella finestra di dialogo, seleziona formato e qualità delle immagini da includere.
+
+### ⚙️ Opzioni di Esportazione
+
+Le stesse del salvataggio singolo:
+
+- **Formato:** PNG, JPG, WebP  
+- **Qualità:** regolabile tramite slider (per JPG e WebP)
+
+### 📦 Risultato
+
+Verrà generato un **file `.zip`** contenente tutte le pagine esportate.  
+All’interno troverai un file immagine per ogni pagina caricata nel **Pannello File**, con i **nomi originali** mantenuti.
+
+---
+
+## 📄 Esportazione di tutte le pagine come singolo file `.pdf`
+
+Questa opzione è perfetta per creare un **documento pronto alla lettura o condivisione**, impaginando automaticamente tutte le pagine del fumetto.
+
+### 🔧 Come si usa
+
+1. Dal **Pannello Esporta**, clicca su **Salva come PDF**.  
+2. L’applicazione renderizzerà ogni pagina come immagine finale.  
+3. Verranno quindi assemblate in **un unico file PDF**, seguendo l’ordine visualizzato nel Pannello File.
+
+### ⚙️ Opzioni di Esportazione
+
+Come nelle altre modalità:
+
+- **Formato:** PNG, JPG o WebP  
+- **Qualità:** regolabile per i formati con perdita
+
+### 📕 Risultato
+
+Verrà scaricato **un singolo file `.pdf`**, dove ogni pagina del fumetto corrisponde a una pagina del documento.  
+L’ordine rispetterà quello mostrato nel **Pannello File**, garantendo una lettura coerente e ordinata.
+
+---
+
+> 💡 **Suggerimento:**  
+> Prima di esportare in ZIP o PDF, assicurati che i testi siano corretti e allineati.  
+> L’esportazione salverà lo stato visivo attuale, inclusi tutti i livelli e formattazioni.
