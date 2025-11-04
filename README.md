@@ -28,4 +28,17 @@
    Copia l’indirizzo e incollalo in qualsiasi browser per aprire l’interfaccia.
 ---
 
+# 🌍 Comics Magic Translator
+
+**Comics Magic Translator** — an AI-assisted tool designed for semi-automatic comic, manga, and webtoon translation (*scanlation*).
+
+📘 **Read this document in your language:**
+
+- [🇬🇧 English Version](./README.en.md)
+- [🇮🇹 Versione Italiana](./README.it.md)
+
+---
+
+✨ *Smart. Fast. Artist-friendly.*
+
 
