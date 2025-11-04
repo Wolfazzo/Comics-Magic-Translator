@@ -1,20 +1,31 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+<img width="500" height="500" alt="logo" src="https://github.com/user-attachments/assets/4f8b5649-e577-4370-9289-729e8f7e8c07" />
 </div>
 
-# Run and deploy your AI Studio app
+## 🇬🇧 Prerequisites
 
-This contains everything you need to run your app locally.
+1. Install Node.js (including additional components).  
+2. Open the terminal in the main CMT project folder.  
+3. Type: npm install  
+4. On Windows, the execution of processes like npm may be restricted.  
+   If you get an error message, paste and confirm this command: Set-ExecutionPolicy Unrestricted  
+   Then run again: npm install  
+5. To start the application, type: npm run dev  
+6. The app will start at: http://localhost:3000/  
+   Copy the address and paste it into any browser to open the interface.
+---
 
-View your app in AI Studio: https://ai.studio/apps/drive/1mK3w1j1Tm66x4poC1L9zUNf1RMXrPaTt
+## 🇮🇹 Prerequisiti
 
-## Run Locally
+1. Installa Node.js (includendo i componenti aggiuntivi).  
+2. Apri il terminale nella cartella principale del progetto CMT.  
+3. Digita: npm install  
+4. Su Windows, potrebbe essere bloccata l’esecuzione di processi come npm.  
+   Se ricevi un messaggio di errore, incolla e conferma questo comando: Set-ExecutionPolicy Unrestricted  
+   Poi riesegui: npm install  
+5. Per avviare l’applicazione, digita: npm run dev  
+6. L’app sarà disponibile all’indirizzo: http://localhost:3000/  
+   Copia l’indirizzo e incollalo in qualsiasi browser per aprire l’interfaccia.
+---
 
-**Prerequisites:**  Node.js
 
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
