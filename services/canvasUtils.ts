@@ -165,46 +165,42 @@ export const drawWrappedTextOnCanvas = (
     ctx.rect(-boxWidth / 2, -boxHeight / 2, boxWidth, boxHeight);
     ctx.clip();
     
-    // --- START: BASELINE ALIGNMENT LOGIC ---
-    // 4a. Calculate metrics for each line to find max ascent/descent
-    const lineMetrics = lines.map(line => {
-        let maxAscent = 0;
-        let maxDescent = 0;
-        if (line.length === 0) {
-            // For empty lines, use the box's base font size to ensure consistent line height
-            const effectiveFontSize = (box.fontSize || 0) * zoom;
-            ctx.font = `${box.fontWeight} ${effectiveFontSize}px ${box.fontFamily}`;
-            const metrics = ctx.measureText('M');
-            maxAscent = metrics.actualBoundingBoxAscent;
-            maxDescent = metrics.actualBoundingBoxDescent;
-        } else {
-            line.forEach(word => {
-                const { style } = word;
-                const effectiveFontSize = style.isSuperscript ? ((style.fontSize || 0) * 0.6) : (style.fontSize || 0);
-                ctx.font = `${style.fontStyle} ${style.fontWeight} ${effectiveFontSize}px ${style.fontFamily}`;
-                const metrics = ctx.measureText(word.text);
-                maxAscent = Math.max(maxAscent, metrics.actualBoundingBoxAscent);
-                maxDescent = Math.max(maxDescent, metrics.actualBoundingBoxDescent);
-            });
-        }
-        return {
-            height: (maxAscent + maxDescent) * (box.lineHeight || 1.2),
-            ascent: maxAscent,
-        };
-    });
+    // --- START: Corrected Baseline Alignment Logic for Uniform Line Spacing ---
 
-    // 4b. Calculate total height and initial Y position
-    const totalTextBlockHeight = lineMetrics.reduce((sum, m) => sum + m.height, 0);
-    let currentY = -totalTextBlockHeight / 2;
+    // 1. Calculate a fixed line height, which represents the constant distance between baselines.
+    const fixedLineHeight = (box.fontSize || 0) * (box.lineHeight || 1.2) * zoom;
 
-    // 4c. Set the baseline for drawing
+    // 2. Approximate the total height of the text block for vertical centering.
+    const totalTextBlockHeight = lines.length * fixedLineHeight;
+
+    // 3. To correctly position the block, we need the ascent of the first line.
+    //    Using a representative character ('M') with the base font style is a robust way to get this.
+    let firstLineAscent = 0;
+    const effectiveBaseFontSize = (box.fontSize || 0) * zoom;
+    ctx.font = `${box.fontWeight} ${effectiveBaseFontSize}px ${box.fontFamily}`;
+    firstLineAscent = ctx.measureText('M').actualBoundingBoxAscent;
+
+    // If the first line is not empty, calculate its actual max ascent for more precise positioning.
+    if (lines[0] && lines[0].length > 0) {
+        let maxAscentInFirstLine = 0;
+        lines[0].forEach(word => {
+            const { style } = word;
+            const effectiveFontSize = style.isSuperscript ? ((style.fontSize || 0) * 0.6) : (style.fontSize || 0);
+            ctx.font = `${style.fontStyle} ${style.fontWeight} ${effectiveFontSize}px ${style.fontFamily}`;
+            maxAscentInFirstLine = Math.max(maxAscentInFirstLine, ctx.measureText(word.text).actualBoundingBoxAscent);
+        });
+        firstLineAscent = maxAscentInFirstLine;
+    }
+
+    // 4. Calculate the baseline Y of the first line to center the block.
+    //    Start from the vertical center, go up by half the block height, then come down by the first line's ascent.
+    let currentBaselineY = -totalTextBlockHeight / 2 + firstLineAscent;
+
+    // 5. Set text baseline for consistent drawing.
     ctx.textBaseline = 'alphabetic';
 
-    // 4d. Draw each line, aligned to its calculated baseline
-    lines.forEach((line, i) => {
-        const metrics = lineMetrics[i];
-        const lineBaselineY = currentY + metrics.ascent;
-
+    // 6. Draw each line, advancing the baseline by the fixed line height each time to ensure a rigid vertical rhythm.
+    lines.forEach((line) => {
         const totalLineWidth = line.reduce((sum, word) => sum + word.width, 0);
         let startX = -boxWidth / 2 + padding;
         if (box.textAlign === 'center') { startX = -totalLineWidth / 2; }
@@ -220,7 +216,7 @@ export const drawWrappedTextOnCanvas = (
             ctx.font = `${style.fontStyle} ${style.fontWeight} ${effectiveFontSize}px ${style.fontFamily}`;
             
             const strokeWidth = style.strokeWidth || 0;
-            const drawY = lineBaselineY + yOffset;
+            const drawY = currentBaselineY + yOffset;
             
             if (strokeWidth > 0) {
                 ctx.strokeStyle = style.strokeColor || '#FFFFFF';
@@ -234,10 +230,12 @@ export const drawWrappedTextOnCanvas = (
             currentX += word.width;
         });
         
-        currentY += metrics.height;
+        // The crucial step: advance the baseline by a constant amount for the next line.
+        currentBaselineY += fixedLineHeight;
     });
 
-    // --- END: BASELINE ALIGNMENT LOGIC ---
+    // --- END: Corrected Baseline Alignment Logic ---
+
     ctx.restore();
 };
 
