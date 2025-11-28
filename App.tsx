@@ -1482,7 +1482,7 @@ const handleApplyImageEdit = useCallback(async (
               width: originalBox.width,
               height: originalBox.height,
               rotation: originalBox.rotation,
-              ocrText: '',
+              ocrText: originalBox.ocrText,
               plainText: translated,
               styleSpans: [],
               fontFamily: defaultTextSettings.fontFamily,
@@ -1669,7 +1669,7 @@ const handleApplyImageEdit = useCallback(async (
                 return {
                     id: Date.now() + Math.random(), type: 'text',
                     x: originalBox.x, y: originalBox.y, width: originalBox.width, height: originalBox.height,
-                    rotation: originalBox.rotation, ocrText: '', plainText: translated, styleSpans: [],
+                    rotation: originalBox.rotation, ocrText: originalBox.ocrText, plainText: translated, styleSpans: [],
                     fontFamily: defaultTextSettings.fontFamily,
                     fontSize: defaultTextSettings.fontSize,
                     textAlign: defaultTextSettings.textAlign,
@@ -3585,7 +3585,7 @@ if (cleanedUrl && (cleanedUrl.startsWith('data:') || cleanedUrl.startsWith('blob
           <div style={{ width: `${panelWidths.right}%` }} className="h-full flex-shrink-0">
             <ToolsPanel
               status={status}
-              ocrText={primarySelectedBox?.type === 'ocr' ? primarySelectedBox.ocrText || '' : ''}
+              ocrText={primarySelectedBox?.ocrText || ''}
               plainText={primarySelectedBox?.type === 'text' ? primarySelectedBox.plainText || '' : ''}
               selectedFile={!!selectedFile}
               hasAnyBoxes={textBoxes.length > 0}
